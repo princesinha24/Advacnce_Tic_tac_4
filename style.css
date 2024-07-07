@@ -8,7 +8,6 @@ body{
 }
 dev{
     color: red;
-    margin: 40px;
     border: solid;
     display: block;
     background-color: bisque;
@@ -19,8 +18,8 @@ dev{
 
 .game{
     text-align: center;
-    height: 80vmin;
-    width: 80vmin;
+    height: 85vmin;
+    width: 85vmin;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -33,14 +32,28 @@ dev{
     height: 15vmin;
     width: 15vmin;
     border-radius: 2.5mm;
-    text-align: center;
-    text-decoration: double;
+    justify-content: center;
+    align-items: center;
 }
 
 #reset{
-    margin-top: 10vmin;
+    margin-top: 5vmin;
 }
 
 h2{
     color: green;
+}
+
+#rule{
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 2.5vmin;
+    margin-right: 1vmin;
+    float: right;
+    background-color: yellow;
+    border-radius: 2vmin;
+    box-shadow: inset;
+    align-items: center;
+    font-size: 2.5vmin;
 }

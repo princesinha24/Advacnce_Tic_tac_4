@@ -13,7 +13,7 @@ if(total_box == ""){
     total_box=4;
 }
 let n=total_box*total_box;
-let box_size=80/total_box;
+let box_size=85/total_box;
 document.querySelector(".game").style.gap=`${box_size*0.1}vmin`;
 for(let i=0;i<n;i++){
     new_element=document.createElement("button");
@@ -22,7 +22,7 @@ for(let i=0;i<n;i++){
     new_element.style.height=`${box_size*0.88}vmin`;
     new_element.style.width=`${box_size*0.88}vmin`;
     new_element.style.fontSize=`${box_size*0.75}vmin`;
-    new_element.style.borderRadius=`${box_size*0.1}vmin`;
+    new_element.style.borderRadius=`${box_size*0.01}vmin`;
     document.querySelector(".game").append(new_element);
 }
 
@@ -210,5 +210,23 @@ for(let i=0;i<n*n;i++){
     });
 };
 reset=document.querySelector("#reset");
-reset.addEventListener("click",initialization)
+reset.addEventListener("click",initialization);
+
+help=document.querySelector("#rule");
+help.addEventListener("click",()=>{
+    if(n<4){
+    alert(`Need to make 3 Xs or Os in any column, row, or diagonal like
+        X O O 
+        X X O
+        O X X`);
+    }
+    else{    
+        alert(`Need to make 4 Xs or Os in any column, row, or diagonal like
+        X O X O O
+        O X X O O
+        O X X O X
+        X O O X X
+        X X O X O`);
+    }
+});
 initialization();
